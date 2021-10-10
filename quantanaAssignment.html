@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="quantanaAssignment.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="content-container">
+            <img class="logo m-5" src="https://res.cloudinary.com/dlhgf0blb/image/upload/v1633536789/Logo_1_xdheee.png" />
+            <div>
+                <img class="quote-image1 " src="https://res.cloudinary.com/dlhgf0blb/image/upload/v1633536847/dfr5niqssfevx3vehoum.png" />
+                <p class="quote-text m-3">Boosting performance for sales professionals at every step of their sales journey</p>
+                <img class="quote-image2" src="https://res.cloudinary.com/dlhgf0blb/image/upload/v1633536847/dfr5niqssfevx3vehoum.png" />
+            </div>
+            <img class="m-5 dots" src="https://res.cloudinary.com/dlhgf0blb/image/upload/v1633536847/Dots_jwvbfj.png" />
+        </div>
+        <form id="loginForm" class="form-container">
+            <div>
+                <h1 class="login-text">Login</h1>
+                <div>
+                    <label for="email">Email<span class="star">*</span></label>
+                    <input id="email" type="text" placeholder="Enter Email" class="form-control shadow" />
+                    <p class="error" id="emailErrMsg"></p>
+                </div>
+                <div>
+                    <label for="password">Password<span class="star">*</span></label>
+                    <div class="password-container">
+                        <input id="password" type="password" placeholder="Enter Password" class="form-control  shadow" />
+                        <i class="bi bi-eye-slash" id="togglePassword"></i>
+                    </div>
+                    <p class="error" id="passwordErrMsg"></p>
+                    <p>Forgot password? <span class="span-text">Click here</span></p>
+                </div>
+                <button id="loginButton" type="button" class="button" data-toggle="modal" data-target="#exampleModalCenter">
+                    Login
+                </button>
+                <p>Don't have an account? <span class="span-text">Register here</span></p>
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p id="loginResult" class="login-status"></p>
+                                <p id="loginHint" class="hint"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="quantanaAssignment.js"></script>
+</body>
+
+</html>
