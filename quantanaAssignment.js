@@ -7,6 +7,10 @@ let togglePassword = document.getElementById("togglePassword");
 let loginButtonEl = document.getElementById("loginButton");
 let loginResult = document.getElementById("loginResult");
 let loginHint = document.getElementById("loginHint");
+let cricket = document.getElementById("cricket")
+let football = document.getElementById("football")
+let hockey = document.getElementById("hockey")
+
 
 
 let userList = {
@@ -41,7 +45,7 @@ togglePassword.addEventListener('click', function() {
     togglePassword.classList.toggle('bi-eye');
 });
 
-function authenticateUser() {
+function authenticateUser(event) {
 
     let emailValue = emailEl.value;
     let passwordValue = passwordEl.value;
@@ -72,7 +76,24 @@ function authenticateUser() {
                 if (alphabetPart.match(letters) && numericPart) {
                     if (emailValue in userList) {
                         if (userList[emailValue] === passwordValue) {
-                            loginResult.textContent = "Login successfull";
+                            if (!cricket.checked && !hockey.checked && !football.checked) {
+                                loginResult.textContent = "Login Failed"
+                            } else if (cricket.checked || hockey.checked || football.checked) {
+                                if (cricket.checked && hockey.checked && football.checked) {
+                                    loginResult.textContent = "Login successfull & Hobbies: " + cricket.value + "," + hockey.value + "," + football.value;
+                                } else if (cricket.checked && hockey.checked) {
+                                    loginResult.textContent = "Login successfull & Hobbies: " + cricket.value + "," + hockey.value;
+                                } else if (cricket.checked && football.checked) {
+                                    loginResult.textContent = "Login successfull & Hobbies: " + cricket.value + "," + football.value;
+                                } else if (cricket.checked) {
+                                    loginResult.textContent = "Login successfull & Hobbies: " + cricket.value;
+                                } else if (hockey.checked) {
+                                    loginResult.textContent = "Login successfull & Hobbies: " + hockey.value;
+                                } else {
+                                    loginResult.textContent = "Login successfull & Hobbies: " + football.value;
+                                }
+                            }
+
                         } else {
                             loginResult.textContent = "Login Failed"
                             loginHint.textContent = "(Incorrect password)";
