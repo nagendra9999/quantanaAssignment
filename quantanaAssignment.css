@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Monoton&family=Open+Sans:wght@400;700&family=Playfair+Display+SC:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Source+Sans+Pro:wght@400;700&family=Work+Sans:wght@400;700&display=swap");
 
+.hobbies-txt{
+    font-size:17px;
+}
+
 .main-container {
     display: flex;
     flex-direction: column;
